@@ -1,6 +1,9 @@
 # mbp_fan_control
 Control your mac fan with your custom level.
 
+### Warning
+The script is test on my MacBook Pro (Retina, 13-inch, Early 2015), you may use it with your own risk.
+
 ### Prerequest
 1. brew install grep
 2. install smcFanControl from https://github.com/hholtmann/smcFanControl
