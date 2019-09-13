@@ -1,12 +1,12 @@
 # mbp_fan_control
-Control your mac fan with your custom level.
+Control your mac fan with your custom level. 
 
 ### Warning
 The script is test on my MacBook Pro (Retina, 13-inch, Early 2015), you may use it with your own risk.
 
 ### Prerequest
 1. brew install grep
-2. install smcFanControl from https://github.com/hholtmann/smcFanControl
+2. install smcFanControl from https://github.com/hholtmann/smcFanControl . smcFanControl can provide realtime temperature and fan speed in status bar, so the good choice is using smcFanControl + mbp_fan_control script.
 
 ### Alter script
 1. Two level temperatures: hotTemp(42), fireTemp(52). 
