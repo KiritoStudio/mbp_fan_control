@@ -51,7 +51,7 @@ getCPUTemp
 echo "cpu proximity temp: $cputemp"
 
 if [ $(echo $cputemp'>'$fireTemp | bc -l) -eq 1 ]; then
-    setFanSpeed $fireTemp
+    setFanSpeed $fireFanSpeed
 elif [ $(echo $cputemp'>'$hotTemp | bc -l) -eq 1 ]; then
     setFanSpeed $hotFanSpeed
 else
