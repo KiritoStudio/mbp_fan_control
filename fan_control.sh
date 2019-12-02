@@ -1,8 +1,12 @@
 #!/bin/bash
 
+coldTemp=35
 hotTemp=42
 fireTemp=52
 
+#the lowest fanSpeed should be 1024, otherwise it will show:
+#Error: value is not valid
+coldFanSpeed=1024
 normalFanSpeed=2000
 hotFanSpeed=3500
 fireFanSpeed=5000
@@ -54,8 +58,10 @@ if [ $(echo $cputemp'>'$fireTemp | bc -l) -eq 1 ]; then
     setFanSpeed $fireFanSpeed
 elif [ $(echo $cputemp'>'$hotTemp | bc -l) -eq 1 ]; then
     setFanSpeed $hotFanSpeed
-else
+elif [ $(echo $cputemp'>'$coldTemp | bc -l) -eq 1 ]; then
     setFanSpeed $normalFanSpeed
+else
+    setFanSpeed $coldFanSpeed
 fi
 
 
